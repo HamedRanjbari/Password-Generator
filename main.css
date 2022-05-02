@@ -1,0 +1,121 @@
+:root{
+  --bgColor: #02021b;
+  --blueColor: #004471;
+  --purpleColor: #282828;
+  --whiteColor: antiquewhite;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  list-style: none;
+  text-decoration: none;
+}
+body {
+  background-color: var(--bgColor);
+  color: var(--whiteColor);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+.alert{
+  background-color: rgb(0, 125, 44);
+  padding: 1rem;
+  border-radius: 10px;
+  position: absolute;
+  top: -200px;
+  transition: all 1s ease-in-out;
+}
+h1{
+  text-align: center;
+}
+.card{
+  background-color: var(--purpleColor);
+  padding: 2rem;
+  border-radius: 20px;
+  height: 60vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.input-pass{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+.input-pass input{
+  position: relative;
+  width: 100%;
+  background-color: #02021b;
+  padding: 0.7rem 3rem;
+  color: var(--whiteColor);
+  border: 0;
+  text-align: center;
+  border-radius: 10px;
+  font-size: 1.2rem;
+}
+input:focus{
+  outline: 0;
+}
+.icon-copy{
+  position: absolute;
+  font-size: 1.5rem;
+  width: 20px;
+  height: 30px;
+  margin-right: 1rem;
+  cursor: pointer;
+}
+.pass-length,
+.upper-letter,
+.lower-letter,
+.numbers,
+.symbols{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.pass-length input{
+  width: 50px;
+  padding: 0.2rem;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 700;
+  border: 0;
+}
+.pass-length input:focus{
+  outline: 0;
+}
+.generate-pass{
+  padding: .7rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 10px;
+  background-color: var(--blueColor);
+  color: var(--whiteColor);
+  border: 0;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: all .6s ease-in-out;
+}
+.generate-pass:hover{
+  background-color: var(--bgColor);
+}
+@media screen and (max-width: 1100px) {
+  .card{
+    width: 80vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: 1.4rem;
+  }
+  h3{
+    font-size: 1rem;
+  }
+}
